@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
   names;
   constructor() {
-    this.names = ["Mekhti","Babek"];
+    this.names = ["Mekhti","Babek","Mert"];
   }
 
   getNames(){

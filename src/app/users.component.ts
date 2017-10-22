@@ -7,13 +7,14 @@ import {UserService} from './user.service'
     <h2>{{getTitle()}}</h2>
     <ul>
       <li *ngFor="let user of users">
-        {{user}}
+        <button class="btn btn-success" [class.active]="isActive" style="margin : 3px" (click)=userClicked($event,user)>{{user}}</button>
       </li>
     </ul>
   `
 })
 
 export class UsersComponent{
+  isActive : boolean = false;
   title = "Users";
   users;
   constructor(service : UserService){
@@ -23,4 +24,9 @@ export class UsersComponent{
   getTitle(){
     return this.title;
   }
+
+  userClicked($event,user){
+    console.log(user," Clicked ",$event);
+  }
+
 }
