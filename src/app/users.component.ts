@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from './user.service'
 
 @Component ({
   selector : 'newCmp',
@@ -14,7 +15,11 @@ import { Component } from '@angular/core';
 
 export class UsersComponent{
   title = "Users";
-  users  = ["Mekhti","Babek"];
+  users;
+  constructor(service : UserService){
+    this.users = service.getNames();
+  }
+
   getTitle(){
     return this.title;
   }
