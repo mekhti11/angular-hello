@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users.component';
 import { AnotherComponent } from './another/another.component'
 import {UserService} from "./user.service";
+import { MypipePipe } from './mypipe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    AnotherComponent
+    AnotherComponent,
+    MypipePipe
   ],
   imports: [
     BrowserModule,
